@@ -7,5 +7,8 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
 
+    a.setOrganizationName("Geremia");
+    a.setApplicationName("Weather");
+
     return a.exec();
 }

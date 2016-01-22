@@ -7,6 +7,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QImage>
+#include <QDebug>
 
 class Weather : public QObject
 {
@@ -25,7 +26,7 @@ public slots:
 private:
     QNetworkAccessManager *naManager;
     QNetworkReply *imgReply;
-    QImage *attrImg;
+    QImage attrImg;
 
 private slots:
     void onSSLErrors(QNetworkReply *);

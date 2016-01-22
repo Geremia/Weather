@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "weather.h"
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +18,16 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Weather *w;
+
+private slots:
+    void onOkButtonClicked();
+    void onAttrImgDownloaded(const QImage &);
+    void onWeatherUpdateFinished(const QString &location, const QString &temp, const QString &wind);
+
+protected:
+    void closeEvent(QCloseEvent *);
+
 };
 
 #endif // MAINWINDOW_H
